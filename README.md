@@ -1,10 +1,7 @@
-# Live2dHistoire
-Live2d的看板娘，用于网页端。
-
-# Live2d伊斯特瓦尔(Histoire) 
-### 可用于网页端显示Live2D版的伊斯特瓦尔(Histoire) emlog插件版可以看这里：https://www.wikimoe.com/?post=75
-### 基于[《给博客添加能动的看板娘(Live2D)-将其添加到网页上吧》](https://imjad.cn/archives/lab/add-dynamic-poster-girl-with-live2d-to-your-blog-02)上的源码进行修改。
-### 在原先的基础上加上了如下功能：
+# Live2d的看板娘——伊斯特瓦尔(Histoire) 
+#### 可用于网页端显示Live2D版的伊斯特瓦尔(Histoire) emlog插件版可以看这里：[传送门](https://www.wikimoe.com/?post=75)
+#### 基于[《给博客添加能动的看板娘(Live2D)-将其添加到网页上吧》](https://imjad.cn/archives/lab/add-dynamic-poster-girl-with-live2d-to-your-blog-02)上的源码进行修改。
+#### 在原先的基础上加上了如下功能：
 
 	1.可以基于图灵机器人的聊天功能（需要自己写接口，默认隐藏）。
 	2.能够随意移动并记录位置（关闭浏览器后失效）。
