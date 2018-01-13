@@ -85,6 +85,9 @@ var talkAPI = "";//如果有类似图灵机器人的聊天接口请填写接口�
 注意路径别弄错了噢 ~  
 PHP 程序推荐使用主题函数获取绝对路径。
 
+### 效果预览
+![](https://t1.aixinxi.net/o_1c3mofql9osmpeb1hfvsbv1hqua.gif-j.jpg)  
+
 	
 ### 模型说明
 本插件仅供学习和交流使用，禁止用于商业用途。
