@@ -2,9 +2,9 @@
 Live2d的看板娘，用于网页端。
 
 # Live2d伊斯特瓦尔(Histoire) 
-## 可用于网页端显示Live2D版的伊斯特瓦尔(Histoire) emlog插件版可以看这里：https://www.wikimoe.com/?post=75
-## 基于[《给博客添加能动的看板娘(Live2D)-将其添加到网页上吧》](https://imjad.cn/archives/lab/add-dynamic-poster-girl-with-live2d-to-your-blog-02)上的源码进行修改。
-#### 在原先的基础上加上了如下功能：
+### 可用于网页端显示Live2D版的伊斯特瓦尔(Histoire) emlog插件版可以看这里：https://www.wikimoe.com/?post=75
+### 基于[《给博客添加能动的看板娘(Live2D)-将其添加到网页上吧》](https://imjad.cn/archives/lab/add-dynamic-poster-girl-with-live2d-to-your-blog-02)上的源码进行修改。
+### 在原先的基础上加上了如下功能：
 
 	1.可以基于图灵机器人的聊天功能（需要自己写接口，默认隐藏）。
 	2.能够随意移动并记录位置（关闭浏览器后失效）。
@@ -62,26 +62,26 @@ var talkAPI = "";//如果有类似图灵机器人的聊天接口请填写接口�
 鼠标放在页面某个元素上时，需要 Live2D 看板娘提示的请修改 message.json 文件。
 
 **示例：**
-```json
-{
-    "mouseover": [
-        {
-            "selector": ".title a",  //此处修改为你页面元素的标签名
-            "text": ["要看看 {text} 么？"]  //此处修改为你需要提示的文字
-        },
-        {
-            "selector": "#searchbox",
-            "text": ["在找什么东西呢，需要帮忙吗？"]
-        }
-    ],
-    "click": [  //此处是 Live2D 看板娘的触摸事件提示
-        {
-            "selector": "#landlord #live2d",
-            "text": ["不要动手动脚的！快把手拿开~~", "真…真的是不知羞耻！","Hentai！", "再摸的话我可要报警了！⌇●﹏●⌇", "110吗，这里有个变态一直在摸我(ó﹏ò｡)"]
-        }
-    ]
-}
-```
+
+	{
+		"mouseover": [
+			{
+				"selector": ".title a",  //此处修改为你页面元素的标签名
+				"text": ["要看看 {text} 么？"]  //此处修改为你需要提示的文字
+			},
+			{
+				"selector": "#searchbox",
+				"text": ["在找什么东西呢，需要帮忙吗？"]
+			}
+		],
+		"click": [  //此处是 Live2D 看板娘的触摸事件提示
+			{
+				"selector": "#landlord #live2d",
+				"text": ["不要动手动脚的！快把手拿开~~", "真…真的是不知羞耻！","Hentai！", "再摸的话我可要报警了！⌇●﹏●⌇", "110吗，这里有个变态一直在摸我(ó﹏ò｡)"]
+			}
+		]
+	}
+
 
 然后，刷新你的页面，看看效果吧！
 
