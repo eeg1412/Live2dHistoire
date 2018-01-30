@@ -291,6 +291,71 @@ if(!norunFlag){
 			$('#showTalkBtn').hide();
 			
 		}
+		//获取音乐信息初始化
+		var bgmListInfo = $('input[name=live2dBGM]');
+		if(bgmListInfo.length == 0){
+			$('#musicButton').hide();
+		}else{
+			var bgmPlayNow = parseInt($('#live2d_bgm').attr('data-bgm'));
+			var bgmPlayTime = 0;
+			var live2dBGM_Num = sessionStorage.getItem("live2dBGM_Num");
+			var live2dBGM_PlayTime = sessionStorage.getItem("live2dBGM_PlayTime");
+			if(live2dBGM_Num){
+				if(live2dBGM_Num<=$('input[name=live2dBGM]').length-1){
+					bgmPlayNow = parseInt(live2dBGM_Num);
+				}
+			}
+			if(live2dBGM_PlayTime){
+				bgmPlayTime = parseInt(live2dBGM_PlayTime);
+			}
+			var live2dBGMSrc = bgmListInfo.eq(bgmPlayNow).val();
+			$('#live2d_bgm').attr('data-bgm',bgmPlayNow);
+			$('#live2d_bgm').attr('src',live2dBGMSrc);
+			$('#live2d_bgm')[0].currentTime = bgmPlayTime;
+			$('#live2d_bgm')[0].volume = 0.5;
+			var live2dBGM_IsPlay = sessionStorage.getItem("live2dBGM_IsPlay");
+			var live2dBGM_WindowClose = sessionStorage.getItem("live2dBGM_WindowClose");
+			if(live2dBGM_IsPlay == '0' && live2dBGM_IsPlay == '0'){
+				$('#live2d_bgm')[0].play();
+				$('#musicButton').addClass('play');
+			}
+			sessionStorage.setItem("live2dBGM_WindowClose" , '1');
+			$('#musicButton').on('click',function(){
+				if($('#musicButton').hasClass('play')){
+					$('#live2d_bgm')[0].pause();
+					$('#musicButton').removeClass('play');
+					sessionStorage.setItem("live2dBGM_IsPlay",'1');
+				}else{
+					$('#live2d_bgm')[0].play();
+					$('#musicButton').addClass('play');
+					sessionStorage.setItem("live2dBGM_IsPlay",'0');
+				}
+			});
+			window.onbeforeunload = function(){ 
+			 	sessionStorage.setItem("live2dBGM_WindowClose" , '0');
+			} 
+			document.getElementById('live2d_bgm').addEventListener("timeupdate", function(){
+				var live2dBgmPlayTimeNow = document.getElementById('live2d_bgm').currentTime;
+				sessionStorage.setItem("live2dBGM_PlayTime" , live2dBgmPlayTimeNow );
+			});
+			document.getElementById('live2d_bgm').addEventListener("ended", function(){
+				var listNow = parseInt($('#live2d_bgm').attr('data-bgm'));
+				listNow ++ ;
+				if(listNow > $('input[name=live2dBGM]').length-1){
+					listNow = 0;
+				}
+				var listNewSrc = $('input[name=live2dBGM]').eq(listNow).val();
+				sessionStorage.setItem("live2dBGM_Num",listNow);
+				$('#live2d_bgm').attr('src',listNewSrc);
+				$('#live2d_bgm')[0].play();
+				$('#live2d_bgm').attr('data-bgm',listNow);
+			});
+			document.getElementById('live2d_bgm').addEventListener("error", function(){
+				$('#live2d_bgm')[0].pause();
+				$('#musicButton').removeClass('play');
+				showMessage('音乐似乎加载不出来了呢！',0);
+			});
+		}
 		//获取用户名
 		var live2dUser = sessionStorage.getItem("live2duser");
 		if(live2dUser !== null){

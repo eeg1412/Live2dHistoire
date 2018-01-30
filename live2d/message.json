@@ -10,7 +10,11 @@
         },
 		{
             "selector": "#hideButton",
-            "text": ["隐藏自己，下次刷新还能见到我哦！"]
+            "text": ["隐藏伊斯特瓦尔，希望隐藏后我们还能再见面！"]
+        },
+		{
+            "selector": "#musicButton",
+            "text": ["给页面加点音乐吗？"]
         },
 		{
             "selector": ".itemarticle-tips a",

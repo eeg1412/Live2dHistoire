@@ -197,6 +197,16 @@
 .live_ico_item.type_info{
 	background-image:url(../images/info.png);
 }
+.live_ico_item.type_music{
+	background-image:url(../images/music.png);
+}
+.live_ico_item.type_music.play{
+	 animation: quan 4s infinite;
+    -webkit-animation: quan 4s infinite;
+    -moz-animation: quan 4s infinite;
+    -o-animation: quan 4s infinite;
+    -ms-animation: quan 4s infinite;
+}
 
 @media (max-width: 860px) {
     #landlord {
@@ -404,4 +414,30 @@
     0%, 100% {
         transform: translate(0, 0) rotate(0);
     }
+}
+
+@keyframes quan {
+      0%   { transform:rotate(0);
+             animation-timing-function:linear; }
+      100% { transform:rotate(360deg); }
+}
+@-webkit-keyframes quan {
+      0%   { -webkit-transform:rotate(0);
+             -webkit-animation-timing-function:linear; }
+      100% { -webkit-transform:rotate(360deg); }
+}
+@-moz-keyframes quan {
+      0%   { -moz-transform:rotate(0);
+             -moz-animation-timing-function:linear; }
+      100% { -moz-transform:rotate(360deg); }
+}
+@-o-keyframes quan {
+      0%   { -o-transform:rotate(0);
+             -o-animation-timing-function:linear; }
+      100% { -o-transform:rotate(360deg); }
+}
+@-ms-keyframes quan {
+      0%   { -ms-transform:rotate(0);
+             -ms-animation-timing-function:linear; }
+      100% { -ms-transform:rotate(360deg); }
 }
