@@ -26,6 +26,9 @@
 	cursor:pointer;
 	display:none;
 }
+#showInfoBtn{
+ 	display:none;
+}
 #live2d {
 	width: 250px;
     height: 280px;

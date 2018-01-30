@@ -236,6 +236,8 @@ if(!norunFlag){
 					$('.live_talk_input_body').fadeOut(500);
 					AITalkFlag = false;
 					showHitokoto();
+					$('#showTalkBtn').show();
+					$('#showInfoBtn').hide();
 				}
 			});
 			$('#showTalkBtn').on('click',function(){
@@ -246,6 +248,9 @@ if(!norunFlag){
 					$('#live_statu_val').val("1");
 					$('.live_talk_input_body').fadeIn(500);
 					AITalkFlag = true;
+					$('#showTalkBtn').hide();
+					$('#showInfoBtn').show();
+					
 				}
 			});
 			$('#talk_send').on('click',function(){
