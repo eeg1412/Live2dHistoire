@@ -201,11 +201,7 @@
 	background-image:url(../images/music.png);
 }
 .live_ico_item.type_music.play{
-	 animation: quan 4s infinite;
-    -webkit-animation: quan 4s infinite;
-    -moz-animation: quan 4s infinite;
-    -o-animation: quan 4s infinite;
-    -ms-animation: quan 4s infinite;
+	background-image:url(../images/pasue.png);
 }
 
 @media (max-width: 860px) {
