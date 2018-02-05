@@ -13,6 +13,10 @@ for(var i=0;i<norunAI.length;i++){
 	}
 }
 
+if(!window.WebGLRenderingContext){
+	norunFlag = true;
+}
+
 if(!norunFlag){
 	var hitFlag = false;
 	var AIFadeFlag = false;
@@ -315,7 +319,7 @@ if(!norunFlag){
 			$('#live2d_bgm')[0].volume = 0.5;
 			var live2dBGM_IsPlay = sessionStorage.getItem("live2dBGM_IsPlay");
 			var live2dBGM_WindowClose = sessionStorage.getItem("live2dBGM_WindowClose");
-			if(live2dBGM_IsPlay == '0' && live2dBGM_IsPlay == '0'){
+			if(live2dBGM_IsPlay == '0' && live2dBGM_WindowClose == '0'){
 				$('#live2d_bgm')[0].play();
 				$('#musicButton').addClass('play');
 			}
@@ -333,6 +337,9 @@ if(!norunFlag){
 			});
 			window.onbeforeunload = function(){ 
 			 	sessionStorage.setItem("live2dBGM_WindowClose" , '0');
+				if($('#musicButton').hasClass('play')){
+					sessionStorage.setItem("live2dBGM_IsPlay",'0');
+				}
 			} 
 			document.getElementById('live2d_bgm').addEventListener("timeupdate", function(){
 				var live2dBgmPlayTimeNow = document.getElementById('live2d_bgm').currentTime;
@@ -441,14 +448,16 @@ if(!norunFlag){
 					if(live2dhidden==="0"){
 						setTimeout(function(){
 							$('#open_live2d').fadeIn(200);
-						},1000);
+						},1300);
 					}else{
 						setTimeout(function(){
 							$('#landlord').fadeIn(200);
-						},1000);
+						},1300);
 					}
+					setTimeout(function(){
+						loadlive2d("live2d", message_Path+"model/histoire/model.json");
+					},1000);
 					initLive2d ();
-					loadlive2d("live2d", message_Path+"model/histoire/model.json");
 					images = null;
 				}
 			}
