@@ -226,7 +226,7 @@
     -ms-animation-play-state: running;
     animation-play-state: running
 }
-.douqilai{
+.douqilai,.douqilai *{
     animation: shake-it .5s reverse infinite cubic-bezier(0.68, -0.55, 0.27, 1.55);
 }
 @media (max-width: 860px) {
