@@ -229,6 +229,9 @@
 .douqilai,.douqilai *{
     animation: shake-it .5s reverse infinite cubic-bezier(0.68, -0.55, 0.27, 1.55);
 }
+.l2d_caihong{
+    animation: rainbow 1.5s infinite;
+}
 @media (max-width: 860px) {
     #landlord {
         display: none!important;
@@ -931,4 +934,7 @@
     100%{
         text-shadow: 3px 0 rgba(0, 255, 255, .5), 5px 0 rgba(255, 0, 0, .5);
     }
+}
+@keyframes rainbow {
+    100% { filter: hue-rotate(360deg); }
 }

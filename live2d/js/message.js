@@ -232,11 +232,18 @@ if(!norunFlag){
 		});
 		$('#youduButton').on('click',function(){
 			if($('#youduButton').hasClass('doudong')){
+				var typeIs = $('#youduButton').attr('data-type');
 				$('#youduButton').removeClass('doudong');
-				$('body').removeClass('douqilai');
+				$('body').removeClass(typeIs);
+				$('#youduButton').attr('data-type','');
 			}else{
+				var duType = $('#duType').val();
+				var duArr = duType.split(",");
+				var dataType = duArr[Math.floor(Math.random() * duArr.length)];
+
 				$('#youduButton').addClass('doudong');
-				$('body').addClass('douqilai');
+				$('#youduButton').attr('data-type',dataType);
+				$('body').addClass(dataType);
 			}
 		});
 		if(talkAPI!==""){
