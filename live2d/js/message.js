@@ -230,6 +230,15 @@ if(!norunFlag){
 				},300);
 			}
 		});
+		$('#youduButton').on('click',function(){
+			if($('#youduButton').hasClass('doudong')){
+				$('#youduButton').removeClass('doudong');
+				$('body').removeClass('douqilai');
+			}else{
+				$('#youduButton').addClass('doudong');
+				$('body').addClass('douqilai');
+			}
+		});
 		if(talkAPI!==""){
 			$('#showInfoBtn').on('click',function(){
 				var live_statu = $('#live_statu_val').val();
