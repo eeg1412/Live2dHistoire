@@ -38,13 +38,21 @@
     <div class="live_ico_box">
     	<div class="live_ico_item type_info" id="showInfoBtn"></div>
     	<div class="live_ico_item type_talk" id="showTalkBtn"></div>
+        <div class="live_ico_item type_music" id="musicButton"></div>
+        <div class="live_ico_item type_youdu" id="youduButton"></div>
         <div class="live_ico_item type_quit" id="hideButton"></div>
         <input name="live_statu_val" id="live_statu_val" value="0" type="hidden" />
+        <audio src="" style="display:none;" id="live2d_bgm" data-bgm="0" preload="none"></audio>
+        <input name="live2dBGM" value="音乐地址" type="hidden">
+        <input id="duType" value="douqilai,l2d_caihong" type="hidden">
     </div>
 </div>
-<div id="open_live2d">召唤伊斯特瓦尔</div>
+<div id="open_live2d">召唤蕾姆</div>
 ```
-
+如果需要BGM支持可以按照上面的例子添加：
+```html
+<input name="live2dBGM" value="音乐地址" type="hidden">
+```
 在 需要页面的 body 标签结束前插入如下代码：
 ```html
 <script type="text/javascript" src="https://apps.bdimg.com/libs/jquery/1.7.1/jquery.min.js"></script>
