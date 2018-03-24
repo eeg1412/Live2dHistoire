@@ -47,7 +47,7 @@
         <input id="duType" value="douqilai,l2d_caihong" type="hidden">
     </div>
 </div>
-<div id="open_live2d">召唤蕾姆</div>
+<div id="open_live2d">伊斯特瓦尔</div>
 ```
 如果需要BGM支持可以按照上面的例子添加：
 ```html
