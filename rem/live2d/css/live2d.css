@@ -20,7 +20,7 @@
 	line-height:24px;
 	font-size:12px;
 	position:fixed;
-	right:5px;
+	left:5px;
 	bottom:5px;
 	z-index:10000;
 	cursor:pointer;
