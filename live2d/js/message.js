@@ -413,7 +413,7 @@ if(!norunFlag){
 			var obj = smcc;
 			moveBottom = parseInt(obj.style.bottom);
 			moveLeft = parseInt(obj.style.left);
-			if(isFirefox=navigator.userAgent.indexOf("Firefox")>0){
+			if(navigator.userAgent.indexOf("Firefox")>0){
 				window.getSelection().removeAllRanges();
 			}			
 			document.onmousemove = function(){
